@@ -53,7 +53,8 @@ class Tool(Item):
         >>> t1.durability, t1.experience
         (98, 2)
         """
-        pass
+
+
 
     def repair(self, by: int = None) -> None:
         """
