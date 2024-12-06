@@ -101,7 +101,8 @@ class Resource(Item):
 
         Another kind of product is made instead.
         """
-        pass
+        bcdvbdsljdjgi
+        dfbldbdflhb
 
 if __name__ == '__main__':
     import doctest
