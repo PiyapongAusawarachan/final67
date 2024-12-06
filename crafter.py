@@ -36,7 +36,20 @@ class Crafter:
         >>> print(c.name)
         My Crafter
         """
-        pass
+        self.name = name
+    @property
+    def name(self):
+        return self.name
+    @name.setter
+    def name(self, name):
+        if len(self.name) == 0:
+            return f'required, cannot be empty string'
+        self.name = name
+
+
+
+
+
 
     # TODO implement properties
 
@@ -46,7 +59,7 @@ class Crafter:
         >>> print(c)
         [Crafter: 'My Crafter' (0 items)]
         """
-        pass
+        return f"[Crafter: '{self.name}' (0 items)]"
 
     def add_item(self, item: Item) -> None:
         """
@@ -61,6 +74,7 @@ class Crafter:
         >>> print(c.inventory)
         [[Wallet, mass 1, $200], [AAAAAA, mass 1, $0]]
         """
+
         pass
 
     def craft(self, recipe: Recipe) -> None:
