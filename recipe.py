@@ -38,7 +38,35 @@ class Recipe:
         >>> item2 = Item('20 baht note', 0, 20)
         >>> recipe = Recipe('Split Bank', [copy.copy(item2)], 2*[copy.copy(item1)])
         """
-        pass
+        self.name = name
+        self.input_items = input_items
+        self.output_items = output_items
+        @property
+        def name(self):
+            return self.name
+
+        @property
+        def input_items(self):
+            return self.input_items
+        @property
+        def output_items(self):
+            return self.output_items
+        @name.setter
+        def name(self, name):
+            if len(name) == 0:
+                return f'must not be empty string'
+            return self.name
+        @input_items.setter
+        def input_items(self, input_items):
+            self.input_items = input_items
+        @output_items.setter
+        def output_items(self, output_items):
+            self.output_items = output_items
+
+
+
+
+
 
     def __str__(self) -> str:
         """
