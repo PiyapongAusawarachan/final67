@@ -25,6 +25,8 @@ class Item:
     """
 
     def __init__(self, name, mass, value) -> None:
+
+
         """
         LEVEL 1: This defines an item named Stick, having mass 1 and value 2.
 
@@ -41,7 +43,22 @@ class Item:
         >>> a.value
         4
         """
-        pass
+        self.name = name
+        self.mass = mass
+        self.value = value
+
+        def get_name(self):
+            return self.name
+        def get_mass(self):
+            return self.mass
+        def get_value(self):
+            return self.value
+        def set_name(self, name):
+            self.name = name
+        def set_mass(self, mass):
+            self.mass = mass
+        def set_value(self, value):
+            self.value = value
 
     #TODO implement properties, or not, up to you
 
@@ -65,7 +82,8 @@ class Item:
         >>> a == e
         False
         """
-        pass
+        return self.name == other.name and self.mass == other.mass and self.value == other.value
+
 
     def __repr__(self) -> str:
         """
@@ -81,7 +99,7 @@ class Item:
 
         Brackets are mandatory.
         """
-        pass
+        return f'[{self.name}, mass {self.mass}, ${self.value}]'
 
 if __name__ == '__main__':
     import doctest
